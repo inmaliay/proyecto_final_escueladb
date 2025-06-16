@@ -1,0 +1,31 @@
+
+14/6 23hs
+
+
+- Puse todos los archivos adentro de una carpeta "Lihuel" así queda lo que va subiendo cada uno sin mezclarse.
+- (Nuevos):
+    *   Main.py) sería el menu en bucle donde se enganchan los sub-menúes(como el que está haciendo Camí de Admin), 
+        dependiendo del acceso
+    *   Parches.txt) para dejar constancia de los cambios que vaya/mos haciendo
+- (Cambios):
+    * AlumnoFun.py) 
+        -   Un error de orden que generaba un problema al usar "existe_alumno_id()" que llamaba a "listar_alumnos()" 
+            estando antes de que se declarara, con bajar el orden se resuelve.
+
+    * CursoFun.py)
+        -   Agregué una función para comprobar si existe el curso de ese ID ("existe_curso_id()")
+        -   Modifiqué la función ("cargar_curso()") para que tenga validación de que el nombre no este vacío
+
+    * Validar.py)
+        -   Agregué una función para validar si el nombre que se está tratando de Cargar esta vacío("input_nombre_vacio()")
+        -   Agregué una función para validar si la clave que se está tratando de Cargar tiene 4 números, y solo números("input_clave()")
+
+    * MateriaFun.py) 
+        -   le agregué las validaciones correspondientes a "cargar_materia()" 
+        (nombre, para que no este vacío y al ID profe para que sea uno existente)
+        -   Agregué una versión de la ya existente "listar_materia_id()",  "listar_materia_idall()", 
+            que cambia una tontería del formato en que devuelve la info.
+    * ProfesorFun.py)
+        -   agregué la Función "existe_profesor_id()" que válida si un profe con ese ID existe y 
+            te da 3 intentos de que cargues uno válido
+        -   Mejoré "cargar_profesor()" para nombre, apellido, Dni y clave tengan sus respectivas validaciones
